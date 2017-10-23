@@ -125,9 +125,9 @@
            MOVE YEARS_OF_DEPOSIT TO YEARS_OF_DEPOSIT_OUT.
            MOVE "    " TO DIVIDER.
 
-           MOVE INTEREST TO INTEREST-OUT.
-           MOVE "    " TO DIVIDER-02.
            MOVE PERCENT TO PERCENT-OUT.
+           MOVE "    " TO DIVIDER-02.
+           MOVE INTEREST TO INTEREST-OUT.
 
            WRITE OUTPUT-REC.
            DISPLAY RESPOND.

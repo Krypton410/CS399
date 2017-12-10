@@ -56,7 +56,7 @@
                MOVE 'Y' TO WS-EOF
            NOT AT END
 
-               DISPLAY '---- ', NEW-FILE
+           DISPLAY '---- ', NEW-FILE
        END-READ.
        READ-PARA-EXIT.
            EXIT.

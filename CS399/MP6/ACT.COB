@@ -81,6 +81,7 @@
 
        OPEN OUTPUT OUTPUT-FILE.
 
+       OPEN INPUT INPUT-FILE.
 
 
 
@@ -88,6 +89,7 @@
            DISPLAY MENU.
 
            ACCEPT OPTION LINE 11 COL 27.
+
 
 
 
@@ -147,20 +149,20 @@
 
 
        C-300-OPTION4-DISPLAY.
-           OPEN INPUT INPUT-FILE.
 
-           PERFORM DISPLAY-INTEL THRU A-50-INITIALIZE UNTIL WS-EOF = "Y".
-           CLOSE OUTPUT-FILE.
+
+           PERFORM DISPLAY-INTEL.
+           CLOSE INPUT-FILE.
 
 
 
        D-400-OPTION5-QUIT.
            CLOSE OUTPUT-FILE.
-
+           CLOSE INPUT-FILE
            STOP RUN.
 
        DISPLAY-INTEL.
-           MOVE ZERO TO LOT_NUMBER_DISPLAY.
+           MOVE ZERO TO LOT_NUMBER_DISPLAY
            READ INPUT-FILE
            AT END
            MOVE 'Y' TO WS-EOF
@@ -170,5 +172,6 @@
            END-READ.
 
        READ-PARA-EXIT.
+           STOP RUN.
            EXIT.
        END PROGRAM ESCABARTE.
